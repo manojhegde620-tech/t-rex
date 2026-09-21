@@ -1,0 +1,17 @@
+# Netlify configuration for T-Rex
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Prompts for these when using the "Deploy to Netlify" button.
+# All are optional — the app works without them; they enable email + 24/7 push.
+[template.environment]
+  SYNC_SECRET      = "A long random string. Paste the SAME value into the app: Settings -> 24/7 cloud alerts."
+  RESEND_API_KEY   = "Free key from resend.com — enables email alerts (optional)."
+  RESEND_FROM      = "Optional sender, e.g. T-Rex Alerts <alerts@yourdomain>"
+  VAPID_PUBLIC_KEY = "From VAPID-KEYS.txt — enables phone push (optional)."
+  VAPID_PRIVATE_KEY= "From VAPID-KEYS.txt — keep secret."
+  VAPID_SUBJECT    = "mailto:you@example.com"

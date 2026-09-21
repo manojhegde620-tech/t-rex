@@ -1,0 +1,11 @@
+{
+  "name": "t-rex-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "T-Rex — Portfolio & Watchlist Desk (NSE/BSE) with Netlify functions.",
+  "dependencies": {
+    "@netlify/blobs": "*",
+    "web-push": "*"
+  }
+}
